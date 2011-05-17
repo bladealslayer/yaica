@@ -1,0 +1,32 @@
+==========================================================
+INSTALLATION INSTRUCTIONS:
+==========================================================
+
+ 0. Install required modules and libraries:
+    - ImageMagick (library)
+    - Image::Magick (Perl module) (a.k.a. PerlMagick)
+    - Email::MIME (Perl module) (requires also Email::Simple)
+    For details on how to do this see the
+    respective documentation.
+    (Sources supplied in directory 'required')
+
+ 1. Copy the configuration file yaica.conf to
+    /usr/local/etc/yaica.conf or /usr/local/etc/imgstore.conf.
+ 
+ 2. Copy the executable file yaica.pl to a directory that
+    exists in the PATH environment variable (for easier use).
+ 
+==========================================================
+USAGE:
+==========================================================
+
+Use this application to store any attached images from
+a given email message with or without applying any
+convertions of file format.
+Pass the message that should be processed to the standard
+input of the application. For example:
+
+ $ cat mail | yaica -f jpeg -d .
+
+Type 'yaica -h' for details on the options.
+
